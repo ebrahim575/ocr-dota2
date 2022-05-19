@@ -71,7 +71,6 @@ def main():
 
         if prev_inventory != curr_inventory and counter != 1:
             if len(prev_inventory) < len(curr_inventory):
-
                 print('A ward has been purchased!')
             else:
                 print('A ward has been placed!')
