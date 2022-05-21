@@ -1,6 +1,6 @@
 import time
 import pyautogui
-
+from playsound import playsound
 
 def box_checker(loc):
     if 1110 <= loc[0] <= 1120 and 935 <= loc[1] <= 945:
@@ -71,9 +71,11 @@ def main():
 
         if prev_inventory != curr_inventory and counter != 1:
             if len(prev_inventory) < len(curr_inventory):
-                print('A ward has been purchased!')
+                print('\nA ward has been purchased!\n')
+                playsound('ward_notification.mp3')
             else:
-                print('A ward has been placed!')
+                print('\nA ward has been placed!\n')
+                playsound('ward_notification.mp3')
             print('Here is the inventory change : ',set1 ^ set2)
 
 main()
